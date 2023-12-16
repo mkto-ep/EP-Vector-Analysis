@@ -1,0 +1,63 @@
+% epvectoranalysis.sty
+
+% ベクトル関係
+%% ベクトル
+\newcommand{\epvector}[1]{\boldsymbol{#1}}
+\newcommand{\epvec}[1]{\epvector{#1}}
+
+%% 内積
+\newcommand{\epdotproduct}{\boldsymbol{\cdot}}
+\newcommand{\epvdot}{\epdotproduct}
+
+%% 外積
+\newcommand{\epcrossproduct}{\boldsymbol{\times}}
+\newcommand{\epcross}{\epcrossproduct}
+
+%% ベクトルとしてのナブラ
+\newcommand{\epvectornabla}{\epvector{\nabla}}
+
+%% 勾配
+\newcommand{\epgradient}{\epvectornabla}
+\newcommand{\epgrad}{\epgradient}
+
+%% 発散
+\newcommand{\epdivergence}{\epvectornabla \epvdot}
+\newcommand{\epdiv}{\epdivergence}
+
+%% 回転
+\newcommand{\epcurl}{\epvectornabla \epcross}
+\newcommand{\eprot}{\epcurl}
+
+%% ラプラシアン
+\newcommand{\eplaplacian}{{\nabla}^2}
+
+% 微分
+%% ローマン体のd
+\newcommand{\eprmd}{\mathrm{d}}
+
+%% 微小量
+\newcommand{\epdifferential}[2][]{{\mathrm{d}}^{#1} {#2}}
+\newcommand{\epdiff}[2][]{\epdifferential[#1]{#2}}
+
+%% スペース付き微小量
+% \newcommand{\epspacedifferential}[2][]{{\, \mathrm{d}}^{#1} {#2}}
+% \newcommand{\epspacediff}[2][]{\epspacedifferential[#1]{#2}}
+
+%% 常微分演算子
+\newcommand{\epordinaryderivative}[3][]{\frac{\epdifferential[#1]{#2}}{\epdifferential{{#3}^{#1}}}}
+\newcommand{\epodv}[3][]{\epordinaryderivative[#1]{#2}{#3}}
+
+%% 常微分演算子 (横書き)
+\newcommand{\epflatordinaryderivative}[3][]{{\epdifferential[#1]{#2}} / {\epdifferential{{#3}^{#1}}}}
+\newcommand{\epfodv}[3][]{\epflatordinaryderivative[#1]{#2}{#3}}
+
+%% 偏微分演算子
+\newcommand{\eppartialderivative}[3][]{\frac{{\partial}^{#1} {#2}}{\partial {{#3}^{#1}}}}
+\newcommand{\eppdv}[3][]{\eppartialderivative[#1]{#2}{#3}}
+
+%% 偏微分演算子 (横書き)
+\newcommand{\epflatpartialderivative}[3][]{{{\partial}^{#1} {#2}} / {\partial {{#3}^{#1}}}}
+\newcommand{\epfpdv}[3][]{\epflatpartialderivative[#1]{#2}{#3}}
+
+% 積分
+\newcommand{\epint}[4]{\int_{#1}^{#2} {#3} \, \epdiff{#4}}
