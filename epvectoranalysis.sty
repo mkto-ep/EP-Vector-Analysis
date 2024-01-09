@@ -60,4 +60,8 @@
 \newcommand{\epfpdv}[3][]{\epflatpartialderivative[#1]{#2}{#3}}
 
 % 積分
+%% 普通の積分
 \newcommand{\epint}[4]{\int_{#1}^{#2} {#3} \, \epdiff{#4}}
+
+%% 周回積分
+\newcommand{\epoint}[4]{\oint_{#1} {#2} \, \epdiff{#3}}

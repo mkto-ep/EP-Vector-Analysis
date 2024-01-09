@@ -1,6 +1,7 @@
 % test.tex
-\documentclass[a4paper]{ltjsarticle}
+\documentclass[a4j]{ltjsarticle}
 \usepackage{luatexja}
+\usepackage[ipaex]{luatexja-preset}
 %\usepackage{mathtools}
 \usepackage{amsmath, amssymb, amsfonts}
 \usepackage{epvectoranalysis} % ベクトル解析用自作パッケージ
@@ -14,85 +15,88 @@
 
 \section*{微分}
 \begin{flalign*}
-    &\text{\texttt{\textbackslash eprmd\{a\}}}&&\eprmd&&\text{微分演算子用の$\eprmd$}\\
+    &\text{\texttt{\textbackslash eprmd\{a\}}}& &\eprmd& &\text{微分演算子用の$\eprmd$}\\
     \\
-    &\text{\texttt{\textbackslash epdifferential\{x\}}}&&\epdifferential{x}&&\text{微小量$\epdifferential{x}$}\\
-    &\text{\texttt{\textbackslash epdifferential[n]\{x\}}}&&\epdifferential[n]{x}&&\text{微小量$\epdifferential[n]{x}$}\\
+    &\text{\texttt{\textbackslash epdifferential\{x\}}}& &\epdifferential{x}& &\text{微小量$\epdifferential{x}$}\\
+    &\text{\texttt{\textbackslash epdifferential[n]\{x\}}}& &\epdifferential[n]{x}& &\text{微小量$\epdifferential[n]{x}$}\\
     \\
-    &\text{\texttt{\textbackslash epdiff\{x\}}}&&\epdiff{x}&&\text{微小量$\epdiff{x}$}\\
-    &\text{\texttt{\textbackslash epdiff[n]\{x\}}}&&\epdiff[n]{x}&&\text{微小量$\epdiff[n]{x}$}\\
+    &\text{\texttt{\textbackslash epdiff\{x\}}}& &\epdiff{x}& &\text{微小量$\epdiff{x}$}\\
+    &\text{\texttt{\textbackslash epdiff[n]\{x\}}}& &\epdiff[n]{x}& &\text{微小量$\epdiff[n]{x}$}\\
     \\
-    &\text{\texttt{\textbackslash epordinaryderivative\{\}\{x\}}}&&\epordinaryderivative{}{x}&&\text{常微分演算子}\\
-    &\text{\texttt{\textbackslash epordinaryderivative[n]\{\}\{x\}}}&&\epordinaryderivative[n]{}{x}&&\text{$n$階の常微分演算子}\\
-    &\text{\texttt{\textbackslash epordinaryderivative\{f\}\{x\}}}&&\epordinaryderivative{f}{x}&&\text{$f$の常微分}\\
-    &\text{\texttt{\textbackslash epordinaryderivative[n]\{f\}\{x\}}}&&\epordinaryderivative[n]{f}{x}&&\text{$f$の$n$階常微分}\\
+    &\text{\texttt{\textbackslash epordinaryderivative\{\}\{x\}}}& &\epordinaryderivative{}{x}& &\text{常微分演算子}\\
+    &\text{\texttt{\textbackslash epordinaryderivative[n]\{\}\{x\}}}& &\epordinaryderivative[n]{}{x}& &\text{$n$階の常微分演算子}\\
+    &\text{\texttt{\textbackslash epordinaryderivative\{f\}\{x\}}}& &\epordinaryderivative{f}{x}& &\text{$f$の常微分}\\
+    &\text{\texttt{\textbackslash epordinaryderivative[n]\{f\}\{x\}}}& &\epordinaryderivative[n]{f}{x}& &\text{$f$の$n$階常微分}\\
     \\
-    &\text{\texttt{\textbackslash epodv\{\}\{x\}}}&&\epodv{}{x}&&\text{常微分演算子}\\
-    &\text{\texttt{\textbackslash epodv[n]\{\}\{x\}}}&&\epodv[n]{}{x}&&\text{$n$階の常微分演算子}\\
-    &\text{\texttt{\textbackslash epodv\{f\}\{x\}}}&&\epodv{f}{x}&&\text{$f$の常微分}\\
-    &\text{\texttt{\textbackslash epodv[n]\{f\}\{x\}}}&&\epodv[n]{f}{x}&&\text{$f$の$n$階常微分}\\
+    &\text{\texttt{\textbackslash epodv\{\}\{x\}}}& &\epodv{}{x}& &\text{常微分演算子}\\
+    &\text{\texttt{\textbackslash epodv[n]\{\}\{x\}}}& &\epodv[n]{}{x}& &\text{$n$階の常微分演算子}\\
+    &\text{\texttt{\textbackslash epodv\{f\}\{x\}}}& &\epodv{f}{x}& &\text{$f$の常微分}\\
+    &\text{\texttt{\textbackslash epodv[n]\{f\}\{x\}}}& &\epodv[n]{f}{x}& &\text{$f$の$n$階常微分}\\
     \\
-    &\text{\texttt{\textbackslash epflatordinaryderivative\{\}\{x\}}}&&\epflatordinaryderivative{}{x}&&\text{常微分演算子 (横書き)}\\
-    &\text{\texttt{\textbackslash epflatordinaryderivative[n]\{\}\{x\}}}&&\epflatordinaryderivative[n]{}{x}&&\text{$n$階の常微分演算子 (横書き)}\\
-    &\text{\texttt{\textbackslash epflatordinaryderivative\{f\}\{x\}}}&&\epflatordinaryderivative{f}{x}&&\text{$f$の常微分 (横書き)}\\
-    &\text{\texttt{\textbackslash epflatordinaryderivative[n]\{f\}\{x\}}}&&\epflatordinaryderivative[n]{f}{x}&&\text{$f$の$n$階常微分 (横書き)}\\
+    &\text{\texttt{\textbackslash epflatordinaryderivative\{\}\{x\}}}& &\epflatordinaryderivative{}{x}& &\text{常微分演算子 (横書き)}\\
+    &\text{\texttt{\textbackslash epflatordinaryderivative[n]\{\}\{x\}}}& &\epflatordinaryderivative[n]{}{x}& &\text{$n$階の常微分演算子 (横書き)}\\
+    &\text{\texttt{\textbackslash epflatordinaryderivative\{f\}\{x\}}}& &\epflatordinaryderivative{f}{x}& &\text{$f$の常微分 (横書き)}\\
+    &\text{\texttt{\textbackslash epflatordinaryderivative[n]\{f\}\{x\}}}& &\epflatordinaryderivative[n]{f}{x}& &\text{$f$の$n$階常微分 (横書き)}\\
     \\
-    &\text{\texttt{\textbackslash epfodv\{\}\{x\}}}&&\epfodv{}{x}&&\text{常微分演算子 (横書き)}\\
-    &\text{\texttt{\textbackslash epfodv[n]\{\}\{x\}}}&&\epfodv[n]{}{x}&&\text{$n$階の常微分演算子 (横書き)}\\
-    &\text{\texttt{\textbackslash epfodv\{f\}\{x\}}}&&\epfodv{f}{x}&&\text{$f$の常微分 (横書き)}\\
-    &\text{\texttt{\textbackslash epfodv[n]\{f\}\{x\}}}&&\epfodv[n]{f}{x}&&\text{$f$の$n$階常微分 (横書き)}\\
+    &\text{\texttt{\textbackslash epfodv\{\}\{x\}}}& &\epfodv{}{x}& &\text{常微分演算子 (横書き)}\\
+    &\text{\texttt{\textbackslash epfodv[n]\{\}\{x\}}}& &\epfodv[n]{}{x}& &\text{$n$階の常微分演算子 (横書き)}\\
+    &\text{\texttt{\textbackslash epfodv\{f\}\{x\}}}& &\epfodv{f}{x}& &\text{$f$の常微分 (横書き)}\\
+    &\text{\texttt{\textbackslash epfodv[n]\{f\}\{x\}}}& &\epfodv[n]{f}{x}& &\text{$f$の$n$階常微分 (横書き)}\\
     \\
-    &\text{\texttt{\textbackslash eppartialderivative\{\}\{x\}}}&&\eppartialderivative{}{x}&&\text{偏微分演算子}\\
-    &\text{\texttt{\textbackslash eppartialderivative[n]\{\}\{x\}}}&&\eppartialderivative[n]{}{x}&&\text{$n$階の偏微分演算子}\\
-    &\text{\texttt{\textbackslash eppartialderivative\{f\}\{x\}}}&&\eppartialderivative{f}{x}&&\text{$f$の偏微分}\\
-    &\text{\texttt{\textbackslash eppartialderivative[n]\{f\}\{x\}}}&&\eppartialderivative[n]{f}{x}&&\text{$f$の$n$階偏微分}\\
+    &\text{\texttt{\textbackslash eppartialderivative\{\}\{x\}}}& &\eppartialderivative{}{x}& &\text{偏微分演算子}\\
+    &\text{\texttt{\textbackslash eppartialderivative[n]\{\}\{x\}}}& &\eppartialderivative[n]{}{x}& &\text{$n$階の偏微分演算子}\\
+    &\text{\texttt{\textbackslash eppartialderivative\{f\}\{x\}}}& &\eppartialderivative{f}{x}& &\text{$f$の偏微分}\\
+    &\text{\texttt{\textbackslash eppartialderivative[n]\{f\}\{x\}}}& &\eppartialderivative[n]{f}{x}& &\text{$f$の$n$階偏微分}\\
     \\
-    &\text{\texttt{\textbackslash eppdv\{\}\{x\}}}&&\eppdv{}{x}&&\text{偏微分演算子}\\
-    &\text{\texttt{\textbackslash eppdv[n]\{\}\{x\}}}&&\eppdv[n]{}{x}&&\text{$n$階の偏微分演算子}\\
-    &\text{\texttt{\textbackslash eppdv\{f\}\{x\}}}&&\eppdv{f}{x}&&\text{$f$の偏微分}\\
-    &\text{\texttt{\textbackslash eppdv[n]\{f\}\{x\}}}&&\eppdv[n]{f}{x}&&\text{$f$の$n$階偏微分}\\
+    &\text{\texttt{\textbackslash eppdv\{\}\{x\}}}& &\eppdv{}{x}& &\text{偏微分演算子}\\
+    &\text{\texttt{\textbackslash eppdv[n]\{\}\{x\}}}& &\eppdv[n]{}{x}& &\text{$n$階の偏微分演算子}\\
+    &\text{\texttt{\textbackslash eppdv\{f\}\{x\}}}& &\eppdv{f}{x}& &\text{$f$の偏微分}\\
+    &\text{\texttt{\textbackslash eppdv[n]\{f\}\{x\}}}& &\eppdv[n]{f}{x}& &\text{$f$の$n$階偏微分}\\
     \\
-    &\text{\texttt{\textbackslash epflatpartialderivative\{\}\{x\}}}&&\epflatpartialderivative{}{x}&&\text{偏微分演算子 (横書き)}\\
-    &\text{\texttt{\textbackslash epflatpartialderivative[n]\{\}\{x\}}}&&\epflatpartialderivative[n]{}{x}&&\text{$n$階の偏微分演算子 (横書き)}\\
-    &\text{\texttt{\textbackslash epflatpartialderivative\{f\}\{x\}}}&&\epflatpartialderivative{f}{x}&&\text{$f$の偏微分 (横書き)}\\
-    &\text{\texttt{\textbackslash epflatpartialderivative[n]\{f\}\{x\}}}&&\epflatpartialderivative[n]{f}{x}&&\text{$f$の$n$階偏微分 (横書き)}\\
+    &\text{\texttt{\textbackslash epflatpartialderivative\{\}\{x\}}}& &\epflatpartialderivative{}{x}& &\text{偏微分演算子 (横書き)}\\
+    &\text{\texttt{\textbackslash epflatpartialderivative[n]\{\}\{x\}}}& &\epflatpartialderivative[n]{}{x}& &\text{$n$階の偏微分演算子 (横書き)}\\
+    &\text{\texttt{\textbackslash epflatpartialderivative\{f\}\{x\}}}& &\epflatpartialderivative{f}{x}& &\text{$f$の偏微分 (横書き)}\\
+    &\text{\texttt{\textbackslash epflatpartialderivative[n]\{f\}\{x\}}}& &\epflatpartialderivative[n]{f}{x}& &\text{$f$の$n$階偏微分 (横書き)}\\
     \\
-    &\text{\texttt{\textbackslash epfpdv\{\}\{x\}}}&&\epfpdv{}{x}&&\text{偏微分演算子 (横書き)}\\
-    &\text{\texttt{\textbackslash epfpdv[n]\{\}\{x\}}}&&\epfpdv[n]{}{x}&&\text{$n$階の偏微分演算子 (横書き)}\\
-    &\text{\texttt{\textbackslash epfpdv\{f\}\{x\}}}&&\epfpdv{f}{x}&&\text{$f$の偏微分 (横書き)}\\
-    &\text{\texttt{\textbackslash epfpdv[n]\{f\}\{x\}}}&&\epfpdv[n]{f}{x}&&\text{$f$の$n$階偏微分 (横書き)}
+    &\text{\texttt{\textbackslash epfpdv\{\}\{x\}}}& &\epfpdv{}{x}& &\text{偏微分演算子 (横書き)}\\
+    &\text{\texttt{\textbackslash epfpdv[n]\{\}\{x\}}}& &\epfpdv[n]{}{x}& &\text{$n$階の偏微分演算子 (横書き)}\\
+    &\text{\texttt{\textbackslash epfpdv\{f\}\{x\}}}& &\epfpdv{f}{x}& &\text{$f$の偏微分 (横書き)}\\
+    &\text{\texttt{\textbackslash epfpdv[n]\{f\}\{x\}}}& &\epfpdv[n]{f}{x}& &\text{$f$の$n$階偏微分 (横書き)}
 \end{flalign*}
 
 \section*{積分}
 \begin{flalign*}
-    &\text{\texttt{\textbackslash epint\{\}\{\}\{\}\{x\}}}&&\epint{}{}{}{x}&&\text{$1$の不定積分}\\
-    &\text{\texttt{\textbackslash epint\{\}\{\}\{f(x)\}\{x\}}}&&\epint{}{}{f(x)}{x}&&\text{$f(x)$の不定積分}\\
-    &\text{\texttt{\textbackslash epint\{a\}\{b\}\{\}\{x\}}}&&\epint{a}{b}{}{x}&&\text{$1$の定積分}\\
-    &\text{\texttt{\textbackslash epint\{a\}\{b\}\{f(x)\}\{x\}}}&&\epint{a}{b}{f(x)}{x}&&\text{$f(x)$の定積分}
+    &\text{\texttt{\textbackslash epint\{\}\{\}\{\}\{x\}}}& &\epint{}{}{}{x}& &\text{$1$の不定積分}\\
+    &\text{\texttt{\textbackslash epint\{\}\{\}\{f(x)\}\{x\}}}& &\epint{}{}{f(x)}{x}& &\text{$f(x)$の不定積分}\\
+    &\text{\texttt{\textbackslash epint\{a\}\{b\}\{\}\{x\}}}& &\epint{a}{b}{}{x}& &\text{$1$の定積分}\\
+    &\text{\texttt{\textbackslash epint\{a\}\{b\}\{f(x)\}\{x\}}}& &\epint{a}{b}{f(x)}{x}& &\text{$f(x)$の定積分}\\
+    \\
+    &\text{\texttt{\textbackslash epoint\{C\}\{\}\{x\}}}& &\epoint{C}{}{x}& &\text{$1$の周回積分}\\
+    &\text{\texttt{\textbackslash epoint\{C\}\{f(x)\}\{x\}}}& &\epoint{C}{f(x)}{x}& &\text{$f(x)$の周回積分}
 \end{flalign*}
 
 \section*{ベクトルと演算子}
 \begin{flalign*}
-    &\text{\texttt{\textbackslash epvector\{a\}}}&&\epvector{a}&&\text{ベクトル}\\
-    &\text{\texttt{\textbackslash epvec\{a\}}}&&\epvec{a}&&\text{ベクトル}\\
+    &\text{\texttt{\textbackslash epvector\{a\}}}& &\epvector{a}& &\text{ベクトル}\\
+    &\text{\texttt{\textbackslash epvec\{a\}}}& &\epvec{a}& &\text{ベクトル}\\
     \\
-    &\text{\texttt{\textbackslash epdotproduct}}&&\epdotproduct&&\text{内積}\\
-    &\text{\texttt{\textbackslash epvdot}}&&\epvdot&&\text{内積}\\
+    &\text{\texttt{\textbackslash epdotproduct}}& &\epdotproduct& &\text{内積}\\
+    &\text{\texttt{\textbackslash epvdot}}& &\epvdot& &\text{内積}\\
     \\
-    &\text{\texttt{\textbackslash epcrossproduct}}&&\epcrossproduct&&\text{外積}\\
-    &\text{\texttt{\textbackslash epcross}}&&\epcross&&\text{外積}\\
+    &\text{\texttt{\textbackslash epcrossproduct}}& &\epcrossproduct& &\text{外積}\\
+    &\text{\texttt{\textbackslash epcross}}& &\epcross& &\text{外積}\\
     \\
-    &\text{\texttt{\textbackslash epvectornabla}}&&\epvectornabla&&\text{ナブラ}\\
+    &\text{\texttt{\textbackslash epvectornabla}}& &\epvectornabla& &\text{ナブラ}\\
     \\
-    &\text{\texttt{\textbackslash epgradient}}&&\epgradient&&\text{勾配}\\
-    &\text{\texttt{\textbackslash epgrad}}&&\epgrad&&\text{勾配}\\
+    &\text{\texttt{\textbackslash epgradient}}& &\epgradient& &\text{勾配}\\
+    &\text{\texttt{\textbackslash epgrad}}& &\epgrad& &\text{勾配}\\
     \\
-    &\text{\texttt{\textbackslash epdivergence}}&&\epdivergence&&\text{発散}\\
-    &\text{\texttt{\textbackslash epdiv}}&&\epdiv&&\text{発散}\\
+    &\text{\texttt{\textbackslash epdivergence}}& &\epdivergence& &\text{発散}\\
+    &\text{\texttt{\textbackslash epdiv}}& &\epdiv& &\text{発散}\\
     \\
-    &\text{\texttt{\textbackslash epcurl}}&&\epcurl&&\text{回転}\\
-    &\text{\texttt{\textbackslash eprot}}&&\eprot&&\text{回転}\\
+    &\text{\texttt{\textbackslash epcurl}}& &\epcurl& &\text{回転}\\
+    &\text{\texttt{\textbackslash eprot}}& &\eprot& &\text{回転}\\
     \\
-    &\text{\texttt{\textbackslash eplaplacian}}&&\eplaplacian&&\text{ラプラシアン}
+    &\text{\texttt{\textbackslash eplaplacian}}& &\eplaplacian& &\text{ラプラシアン}
 \end{flalign*}
 \end{document}
