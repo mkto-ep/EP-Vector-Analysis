@@ -33,7 +33,7 @@
 
 % 微分
 %% ローマン体のd
-\newcommand{\eprmd}{\mathrm{d}}
+%\newcommand{\eprmd}{\mathrm{d}}
 
 %% 微小量
 \newcommand{\epdifferential}[2][]{{\mathrm{d}}^{#1} {#2}}
@@ -58,6 +58,14 @@
 %% 偏微分演算子 (横書き)
 \newcommand{\epflatpartialderivative}[3][]{{{\partial}^{#1} {#2}} / {\partial {{#3}^{#1}}}}
 \newcommand{\epfpdv}[3][]{\epflatpartialderivative[#1]{#2}{#3}}
+
+%% ラグランジュ微分
+\newcommand{\eplagrangederivative}[3][]{\frac{{\mathrm{D}}^{#1} {#2}}{\mathrm{D} {{#3}^{#1}}}}
+\newcommand{\epldv}[3][]{\eplagrangederivative[#1]{#2}{#3}}
+
+%% ラグランジュ微分 (横書き)
+\newcommand{\epflatlagrangederivative}[3][]{{{\mathrm{D}}^{#1} {#2}} / {\mathrm{D} {{#3}^{#1}}}}
+\newcommand{\epfldv}[3][]{\epflatlagrangederivative[#1]{#2}{#3}}
 
 % 積分
 %% 普通の積分
